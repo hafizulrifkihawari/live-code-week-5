@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "",
+    "password": "",
+    "database": "p2_livecode_1",
+    "host": "",
+    "dialect": "postgres"
+  }
+}

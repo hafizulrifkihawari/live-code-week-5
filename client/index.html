@@ -20,12 +20,12 @@
         <button id="btn-logout" class="btn btn-primary ml-auto">Logout</button>
       </div>
 
-      <div id="alert" class="alert alert-warning alert-dismissible fade show" role="alert">
-        Your notification goes here
+      <div id="alert" class="alert alert-warning alert-dismissible fade show" role="alert" style="display: none;">
+        
       </div>
 
       <!-- This is Login Form  -->
-      <div>
+      <div id="loginForm">
         <h1>Login</h1>
         <form class="my-4">
           <div class="form-group">
@@ -51,89 +51,95 @@
           <button type="submit" class="btn btn-primary">
             Submit
           </button>
-          <button type="submit" class="btn btn-info">
+          <button type="submit" class="btn btn-info" id="getRegisterForm">
             Register
           </button>
         </form>
       </div>
 
       <div>
-        <h1>Register</h1>
-        <form class="my-4">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input
-              type="name"
-              class="form-control"
-              name="name"
-              id="name"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input
-              type="email"
-              class="form-control"
-              name="email"
-              id="email"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="password">Password</label>
-            <input
-              type="password"
-              class="form-control"
-              name="password"
-              id="password"
-              required
-            />
-          </div>
-          <button type="submit" class="btn btn-primary">
-            Submit
-          </button>
-          <button type="submit" class="btn btn-warning">
-            Random User
-          </button>
-          <button type="submit" class="btn btn-info">
-            Login
-          </button>
-        </form>
-      <ist -->
-      <div>
-        <h1>Comic Collection</h1>
-        <div class="row my-4">
-          <!-- Each of comic will have one of this card -->
-          <div class="col-4 mb-4">
-            <div class="card text-center">
-              <img
-                src="https://www.idwpublishing.com/wp-content/uploads/2018/10/aHR0cDovL3d3dy5uZXdzYXJhbWEuY29tL2ltYWdlcy9pLzAwMC8yNDAvNzQ0L29yaWdpbmFsL1NwaWRlcm1hbjAxX2N2ckEuanBn.jpeg"
-                class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">The Amazing Spiderman - new Avengers</h5>
-                <p class="card-text">Author: J Michael S</p>
-                <button class="btn btn-primary">Edit</button>
-              </div>
+        <div class="container" id="registerForm" style="display: none;">
+          <h1>Register</h1>
+          <form class="my-4" id="submitForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                type="name"
+                class="form-control"
+                name="name"
+                id="registerName"
+                required
+              />
             </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                name="email"
+                id="registerEmail"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                name="password"
+                id="registerPassword"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Submit
+            </button>
+            <button type="submit" class="btn btn-warning">
+              Random User
+            </button>
+            <button type="submit" class="btn btn-info" id='getLoginForm'>
+              Login
+            </button>
+          </form>
+        </div>
+      <ist -->
+
+
+      <div>
+        <div class="container" id="comicCollection" style="display: none;">
+          <h1>Comic Collection</h1>
+          <div class="row my-4" id="cardData">
+            <!-- Each of comic will have one of this card -->
+            <!-- <div class="col-4 mb-4">
+              <div class="card text-center">
+                <img
+                  src="https://www.idwpublishing.com/wp-content/uploads/2018/10/aHR0cDovL3d3dy5uZXdzYXJhbWEuY29tL2ltYWdlcy9pLzAwMC8yNDAvNzQ0L29yaWdpbmFsL1NwaWRlcm1hbjAxX2N2ckEuanBn.jpeg"
+                  class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">The Amazing Spiderman - new Avengers</h5>
+                  <p class="card-text">Author: J Michael S</p>
+                  <button class="btn btn-primary">Edit</button>
+                </div>
+              </div>
+            </div> -->
           </div>
         </div>
 
       <!-- This is form page to update a comic -->
-      <div>
+      <div id="updateForm" style="display: none;">
         <h1>Update Comic</h1>
         <form class="my-4">
           <div class="form-group">
             <label for="title">Title</label>
-            <input id="title" type="text" class="form-control" name="title" />
+            <input type="text" class="form-control" name="title" id="updateTitle"/>
           </div>
           <div class="form-group">
             <label for="author">Author</label>
-            <input type="text" class="form-control" name="author" />
+            <input type="text" class="form-control" name="author" id="updateAuthor" />
           </div>
           <div class="form-group">
             <label for="imageUrl">Comic Image URL</label>
-            <input type="text" class="form-control" name="imageUrl" />
+            <input type="text" class="form-control" name="imageUrl" id="updateImg"/>
           </div>
           <button id="btn-update" type="submit" class="btn btn-primary">
             Submit
@@ -142,4 +148,7 @@
       </di>
     </div>
   </body>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="script.js"></script>
 </html>
